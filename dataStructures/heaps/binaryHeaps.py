@@ -32,7 +32,7 @@ class min_heap:
         # Don't necessarily want to modify in-place the list being passed.
         self.heap = contents.copy()
 
-        # The time complexity of heapsort is O(n). See paper for derivation of this, as well as why we start iterating
+        # The time complexity of heapify is O(n). See paper for derivation of this, as well as why we start iterating
         # from the final leaf of the heap and make sure to do sift down rather than sift up.
         for i in range(len(self.heap))[::-1]:
             self._siftdown(i)
