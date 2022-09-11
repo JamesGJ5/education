@@ -347,7 +347,7 @@ def explore_island(grid, r, c, visited):
     if tile_type == 'w':
         return False
 
-    # todo: the below is a bit clunky, especially in case you miss a couple of brackets, so it might be a better idea
+    # Note: the below is a bit clunky, especially in case you miss a couple of brackets, so it might be a better idea
     #   to make visited a dictionary with keys equal to r and each r with its corresponding c, for the coordinate
     #   visited. Could also map the c to a value of True
     if str((r, c)) in visited:
@@ -398,7 +398,7 @@ def measure_island(grid, r, c, visited):
     if not grid[r][c] == 'l':
         return count
 
-    # todo: the below is a bit clunky, especially in case you miss a couple of brackets, so it might be a better idea
+    # Note: the below is a bit clunky, especially in case you miss a couple of brackets, so it might be a better idea
     #   to make visited a dictionary with keys equal to r and each r with its corresponding c, for the coordinate
     #   visited
     if str((r, c)) in visited:
