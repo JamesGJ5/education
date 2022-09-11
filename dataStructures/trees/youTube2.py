@@ -36,13 +36,14 @@
 #   Call the node being deleted D, its smaller (left-hand) child L and its bigger (right-hand) child R. If you replace
 #   D with L, you indeed have the property that the new parent is smaller than all values in the right-hand subtree (at
 #   the top of which lies R). However, if L had any right-hand children of its own, then that would remain in the left
-#   subtree (where L was), and thus L would not be bugger than all values in the left subtree, where it used to be.
+#   subtree (where L was), and thus L would not be bigger than all values in the left subtree, where it used to be.
 #   Thus, this would not be a valid solution.
 #   INSTEAD, what you do is traverse the right-hand subtree, deviating towards left-hand nodes wherever you can, until
 #   you find the last left-hand node in this path (see the YouTube video). Then, you convert D into this node, and the
 #   binary search tree order is retained. O(log(n)
 #   todo: make sure there isn't anymore to the above. For example, if L has no children, do you still take a left-hand
 #   node from the right-hand subtree instead?
+#   Answer: I think we just find the in-order successor for consistency.
 
 # According to
 # https://www.baeldung.com/cs/applications-of-binary-trees#:~:text=In%20computing%2C%20binary%20trees%20are,insertion%2C%20deletion%2C%20and%20traversal.
