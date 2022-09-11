@@ -19,7 +19,8 @@ from typing import Union
 #   Exactly 1 path between root and any node
 #   todo: resolve the below query
 #   According to the video, an empty tree (no nodes or edges) is considered a binary tree as well... but wouldn't an
-#       empty tree have 0 roots, and thus not count?
+#   empty tree have 0 roots, and thus not count. However, if it has no nodes, it has no roots, so this is inconsistent
+#   with the above binary tree definition.
 
 # Even a tree with a single node fits the criteria above and is thus a binary tree.
 
