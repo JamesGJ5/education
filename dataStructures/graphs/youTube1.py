@@ -284,11 +284,12 @@ def shortest_path(edges, src, dst):
     After building this adjacency map, the length of the shortest path from node src to node dst is found using a
     breadth-first traversal. If there is no path from src to dst, -1 is returned.
 
-    TODO: according to the YouTube video, the time complexity of this algorithm is O(n). So, if the map doubles in
+    Old question: according to the YouTube video, the time complexity of this algorithm is O(n). So, if the map doubles in
       number of nodes, the time taken to find the shortest path doubles. However, what assumptions are made about the
       positions of the src and dst node? Surely, if the map is just a huge grid and we double the number of nodes but
       keep the positions of src and dst constant, then the time complexity is actually O(1)? Same question for space
       complexity.
+    Answer: because we are thinking about worst-case time complexity to err on the side of caution
     Time complexity: O(n)
     Auxiliary space complexity: O(n)
     """
