@@ -99,7 +99,10 @@ class Deck:
 # DEPENDENCY: objects of one class might take objects of another class as parameters, or use objects of the other class
 # as part of a computation. The book doesn't say that Deck and Card have a DEPENDENCY, probably because neither takes
 # objects of the other as parameters in its __init__ method.
-# TODO: check the above
+# The above might be correct, because https://www.infoworld.com/article/3032175/exploring-generalization-specialization-and-dependency-in-oop.html
+# implies that a dependent object NEEDS the object it depends on for its implementation, and although a Deck needs 
+# Cards to operate on Cards, perhaps it is still a Deck (although an empty one) without Cards and thus serves somehow 
+# as a Deck implementation. Not entirely sure though.
 
 
 # 18.9 Debugging
