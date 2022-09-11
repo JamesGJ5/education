@@ -1,0 +1,11 @@
+09:45:00
+10:07:17
+Is end after start?
+True
+Using __str__
+09:45:00 10:07:17
+11:20:00
+10:07:17
+10:07:17
+Example of polymorphism
+23:01:00

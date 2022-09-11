@@ -1,0 +1,403 @@
+1.1 What is a program?:
+
+    conditional execution: Check for certain conditions and run the appropriate code.
+
+1.4 Arithmetic operators:
+
+    ** performs exponentiation, as in 2**3 = 8
+    ^ IS A BITWISE OPERATOR CALLED XOR - SEE http://wiki.python.org/moin/BitwiseOperators
+
+1.5 Values and types:
+
+    42.0 is a floating-point number, hence the origin of the function 'float'
+
+1.6 Formal and natural languages:
+
+    "Programming languages are formal languages that have been designed to
+        express computations"
+    "This is @ well-structured Engli$h sentence with invalid t*kens in it."
+    "This sentence all valid tokens has, but invalid structure with."
+
+1.8 Glossary:
+
+    portability: A property of a program that can run on more than one kind of computer.
+
+2.2 Variable names:
+
+    Python 3 keywords:
+        False class finally is return None continue for lambda try
+        True def from nonlocal while and del global not with
+        as elif if or yield assert else import pass
+        break except in raise
+
+2.8 Debugging:
+
+    Syntax error: “Syntax” refers to the structure of a program and the rules about that structure. For example, parentheses have to come in matching pairs, so (1 + 2) is legal,
+        but 8) is a syntax error
+
+    Runtime error: The second type of error is a runtime error, so called because the error does
+        not appear until after the program has started running. These errors are also called
+        exceptions because they usually indicate that something exceptional (and bad) has
+        happened
+
+    Semantic error: The third type of error is “semantic”, which means related to meaning.
+        If there is a semantic error in your program, it will run without generating error
+        messages, but it will not do the right thing. It will do something else. Specifically, it
+        will do what you told it to do
+
+2.9 Glossary:
+
+    operand: One of the values on which an operator operates.
+
+3.2 Math functions:
+
+    A module is a file that contains a collection of related functions.
+
+3.4 Adding new functions:
+
+    Empty parentheses after the name of a function indicate that this function doesn’t take any arguments.
+    Most people use single quotes except when single quote (which is also an apostrophe) appears in the string
+
+3.7 Parameters and arguments:
+
+    Not mentioned in the book but according to https://stackoverflow.com/questions/20969773/exponentials-in-python-xy-vs-math-powx-y,
+        it seems ** typically runs faster than math.pow()
+
+3.9 Stack diagrams:
+
+    When you create a variable that is not within any function, it belongs to __main__
+    The list of functions displayed in the error message of a flow of execution containing nested functions is called a
+        traceback.
+
+3.10 Fruitful and void functions:
+
+    A function, for example, which solely prints two particular lines but returns no value is called a void function.
+        More technically, this is defined as a function that always returns None.
+
+3.13 Glossary:
+
+    local variable: A variable defined inside a function. A local variable can only be used
+        inside its function.
+    module object: A value created by an import statement that provides access to the values
+        defined in a module.
+    dot notation: The syntax for calling a function in another module by specifying the module name followed by a dot
+        (period) and the function name.
+
+4.1 The turtle module:
+
+    The method, fd, is associated with the turtle object we’re calling bob. Calling a method is
+        like making a request: you are asking bob to move forward.
+
+4.2 Simple repetition:
+
+    A for statement is also called a loop because the flow of execution runs through the body
+        and then loops back to the top.
+
+4.6 Interface design:
+
+    The interface of a function is a summary of how it is used: what are the parameters? What does the function do? And
+        what is the return value? An interface is “clean” if it allows the caller to do what they want without dealing
+        with unnecessary details.
+
+4.8 A development plan:
+
+    The "encapsulationa and generalisation" development plan used in coding in chapter 4 can be useful if you don’t know
+        ahead of time how to divide the program into functions. This approach lets you design as you go along.
+
+4.10 Debugging:
+
+    'Preconditions' are requirements that must be met before a function starts executing, for example, the argument passed
+        to a length parameter of the function being positive. 'Postconditions' include the intended effect of a function (like
+        drawing line segements).
+    Postcondition: A requirement that should be satisfied by the function before it ends.
+
+
+4.11 Glossary:
+
+    Keyword argument: An argument that includes the name of the parameter as a “keyword".
+    Interface: A description of how to use a function, including the name and descriptions of
+        the arguments and return value.
+
+5.1 Floor division and modulus:
+
+    Among other things, you can use the modulus operator, %, to check if one number is divisible by another.
+    N.B: when you do -27 % 4, the remainder is 1 rather than -3.
+
+5.2 Boolean expressions:
+
+    A boolean expression is an expression that is either true or false.
+    True and False are special values that belong to the type bool.
+    Operators like ==, != and > are relational operators.
+
+5.3 Logical operators:
+
+    There are three logical operators: and, or, and not.
+    Strictly speaking, the operands of the logical operators should be boolean expressions, but Python is not very
+        strict. Any nonzero number is interpreted as True.
+
+5.4 Conditional exeution:
+
+    Statements consisting of a header followed by an intended body, as with 'if' statements, is a compound statement.
+    A pass statement does nothing, for example, in a compound statement where it is the only line of the body.'
+
+5.5 Alternative execution:
+
+    In alternative execution, the alternatives (e.g. those with headers elif: or else: are called branches, because
+        they are branches in the flow of execution.
+
+5.7 Nested conditionals:
+
+    Although the indentation of the statements makes the structure apparent, nested conditionals become difficult to
+        read very quickly. It is a good idea to avoid them when you can.
+
+5.8 Recursion:
+
+    A function that calls itself is recursive; the process of executing it is called recursion.
+
+5.9 Infinite recursion:
+
+    In most programming environments, a program with infinite recursion does not really run forever. Python reports an
+        error message when the maximum recursion depth is reached.
+
+5.12 Debugging:
+
+    In general, error messages indicate where the problem was discovered, but the actual error might be earlier in the
+        code, sometimes on a previous line.
+
+5.13 Glossary:
+
+    base case: A conditional branch in a recursive function that does not make a recursive call.
+
+6.1 Return values:
+
+    Void functions have a return value of None.
+    Temporary values like a, which store the value to be returned before the return occurs, can make debugging easier.
+    As soon as a return statement runs, the function terminates without executing any subsequent statements. Code
+        that appears after a return statement, or any other place the flow of execution can never reach, is called dead code.
+
+6.2 Incremental development:
+
+    When you start out, you should add only a line or two of code at a time. As you gain more experience, you might
+        find yourself writing and debugging bigger chunks.
+
+6.5 More recursion:
+
+    See Figure 6.5 for the stack diagram that applies when the following function is first called with 3 passed as the
+        argument:
+
+        def factorial(n):
+            if n == 0:
+                return 1
+            else:
+                recurse = factorial(n-1)
+                result = n * recurse
+                return result
+
+6.8 Checking types:
+
+    isinstance(,) is a built-in function with two parameters, the object and type in question. True is returned if the
+        object given belongs to the type is given; False is returned otherwise.
+
+7.1 Reassignment:
+
+    See Figure 7.1 for what reassignment looks like on a state diagram.
+
+7.2 Updating variables:
+
+    Updating a variable by adding a positive number is called an increment; subtracting a postiive number is called a
+        decrement.
+
+7.4 break:
+
+    Writing while loops using break is commonly done since this allows conditions to be checked anywhere in the loop, not
+        just at the top, and allows you to express the stop condition affirmitively.
+
+7.6 Algorithm:
+
+    An algorithm is a mechanical process for solving a category of problems (like computing square roots).
+
+7.8 Glossary:
+
+    initialization: An assignment that gives an initial value to a variable that will be updated.
+
+8.3 Traversal with a for loop:
+
+    A lot of computations involve processing a string one character at a time. Often they start at the beginning,
+        select each character in turn, do something to it, and continue until the end. This pattern of processing is
+        called a traversal.
+
+8.4 String methods:
+
+    A method call is called an invocation. For example, when invoking the method upper on a string object called word.
+
+8.13 Exercises:
+
+    http://docs.python.org/3/library/stdtypes.html#string-methods contains string methods, among other things.
+
+9.1 Reading word lists:
+
+    fin is a common name for a file object used for input.
+
+9.3 Search:
+
+    My answer to exercise 9.5 (specifically, the uses_all function) utilises 'reduction to a previously solved problem',
+        where we realise the current problem is just a specific instance of a previously solved problem and apply an
+        existing solution, here by using the uses_only function in uses_all's definition.
+
+9.5 Debugging:
+
+    In addition to the test cases you generate, you can also test your program with a word list like words.txt. But
+        remember, programme testing is deficient in that "programme testing can be used to show the presence of bugs,
+        but never to show their absence!" - Edsger W. Dijkstra.
+
+9.6 Glossary:
+
+    file object: A value that represents an open file.
+
+10.1 A list is a sequence:
+
+    As with an empty string, an empty list also has its uses.
+
+10.5 List slices:
+
+    For a list t, t[:] makes a copy of the list. Because lists are mutable, this is oft usesful before performing
+        operations that modify a list.
+    One can update multiple list elements at once with a slice operator, like in t[0:2] = ["a", "b"].
+
+10.6 List methods:
+
+    Built-in list methods:
+        append() adds an element at the end of the list;
+        clear() removes all the elements from the list;
+        copy() returns a copy of the list;
+        count() returns the number of elements with the specified value;
+        extend() add the elements of a list (or any iterable), to the end of the current list;
+        index() returns the index of the first element with the specified value;
+        insert() adds an element at the specified position;
+        pop() removes the element at the specified position, or from the end if none is specified;
+        remove() removes the first item with the specified value;
+        reverse() reverses the order of the list;
+        sort() sorts the list.
+    Most list methods are void - they simply modify the list and return None.
+    sum(t) can sum the elements in list t (as long as they are summable); an operation like this that combines a
+        sequence of elements into a single value is sometimes called reduce.
+
+10.7 Map, filter and reduce:
+
+    Operations like capitalize_all in the book are oft called maps because they map a function onto each of the
+        elements of a sequence.
+    An operation like only_upper is called a filter because it selects some of the elements and
+        filters out the others.
+    Most common list operations can be expressed as a combination of map, filter and reduce.
+
+10.8 Deleting elements:
+
+    del operator is used rather than pop when the removed value doesn't need to be returned to you upon removal.
+
+10.9 Lists and strings:
+
+    To convert from a string to a list of characters, you can use the function 'list'.
+    t is aptly used as a variable name for a list because list itself is a built-in function, and l looks a bit like a
+        1.
+    While the list functions breaks a string into list elements of individual letters, the split METHOD converts it to
+        individual words instead.
+
+10.10 Objects and values:
+
+     If you assign a = "banana" and b = "banana", the statement 'a is b' returns True because Python only creates one
+        string object (i.e. it doesn't create individual bananas) to which both a and b refer. However, if "banana" had
+        been replaced with lists of the same type, 'a is b' would return False. The lists would be equivalent but not
+        identical.
+     In light of the above, an object has a value: both aforementioned lists have the same value but are different
+        objects.
+
+10.11 Aliasing:
+
+    If a refers to an object and you assign b = a, both variables refer to the same object, so 'b is a' returns True.
+    The association of a variable with an object is called a reference. In this example, there are two references to
+        the same object.
+    An object with more than one reference has more than one name, so we say that the object
+        is aliased.
+    If the aliased object is mutable, changes made with one alias affect the other. This can be useful but it is error
+        prone, so it's generally safer to avoid aliasing when working with MUTABLE objects.
+
+10.12 List arguments:
+
+    Passing a list to the function gives the function a reference to the list.
+    The append() operator modifies a list whereas the + operator can create a new one, e.g. t2 = t1.append(3) returns
+        None, while t1 is changed, whereas t3 = t1 + [4] gives the new list to t3, while t1 remains unchanged.
+
+10.13 Debugging:
+
+    t = t.sort() returns None, i.e. if you then print(t) you won't get anything - t is no longer a list.
+    Before using list methods and operators, read the documentation carefully and then test them in interactive mode.
+    t += [x] is legal, t += x causes a runtime error.
+    Make copies to avoid aliasing (i.e. if you want to sort a list but also retain the original list, make a copy
+        first; the built-in function 'sorted' could also be used to do this, e.g. t2 = sorted(t).
+
+11.1 A dictionary is a mapping:
+
+    A dictionary can have non-integer indices (keys).
+    The len operator returns the number of key-value pairs in a dictionary.
+    The in operator tells you whether there's a certain key in the dictionary.
+    The method values returns a collection of values, which you can then use the in operator on, if you want to check
+        for a certain value in the dictionary.
+    Dictionaries use a data structure called a hashtable that allows the in operator to take the same amount of search
+        time regardless of the number of key-value pairs in the dictionary; for lists, in takes longer with more list
+        items.
+
+11.3 Looping and dictionaries:
+
+    Comma in a print statement allows you to print strings alongside numbers without having to use the str() function
+        on said numbers, as well as having other effects.
+    sorted() can sort a dictionary before traversal by for, if you want to traverse the dictionary in key order.
+
+11.4 Reverse lookup:
+
+    LookupError() is a built-in function that can be raised with the raise operator. This built-in exception indicates
+        an operation has failed, and an optional argument can provide more information.
+    A reverse lookup is much slower than a forward lookup; if you have to do it often, or if the dictionary gets big,
+        the performance of your program will suffer.
+
+11.5 Dictionaries and lists:
+
+    Lists can be dictionary values.
+    Mutable types, like lists, aren't hashable and therefore can't be dictionary keys; tuples can be used as keys
+        instead of lists.
+    Dictionaries are mutable so can't be keys but can be values.
+
+11.7 Global varialbes:
+
+    Variables in __main__ are sometimes called global because they can be accessed from any function.
+    It is common to use global variables for flags; that is, boolean variables that indicate (“flag”) whether a
+        condition is true.
+    If you have a particular variable in __main__, if you try to change it within a function definition via
+        reassignment, a variable will just be created locally, of the same name, which disappears when the function
+        call ends - instead, declare the variable in the function definition via "global "variable name"", without the
+        quotation marks.
+    If a global variable refers to a mutable value (like a list element), you can modify the value without declaring
+        the variable.
+
+11.8 Debugging:
+
+    Suggestions for debugging large datasets:
+        -> Scale down the input: by reducing the size of the dataset, if possible. For example if the programme reads a
+            text file, start with just the first 10 lines, or with the smallest example you can find. You can either
+            edit the files themselves, or (better) modify the program so it reads only the first n lines. If there is
+            an error, you can reduce n to the smallest value that manifests the error, and then increase it gradually
+            as you find and correct errors.
+        -> Check summaries and types: instead of printing and checking the entire dataset, consider printing summaries
+            of the data: for example, the number of items in a dictionary or the total of a list of numbers A common
+            cause of runtime errors is a value that is not the right type. For debugging this kind of error, it is
+            often enough to print the type of a value.
+        -> Write self-checks: sometimes you can write code to check for errors automatically. For example, if you are
+            computing the average of a list of numbers, you could check that the result is not greater than the largest
+            element in the list or less than the smallest. This is called a “sanity check” because it detects results
+            that are “insane”.
+        -> Format the output: Formatting debugging output can make it easier to spot an error. We saw an example in
+            Section 6.9. Another tool you might find useful is the pprint module, which provides a pprint function
+            that displays built-in types in a more human-readable format (pprint stands for “pretty print”).
+
+11.9 Glossary:
+
+    flag: A boolean variable used to indicate whether a condition is true.

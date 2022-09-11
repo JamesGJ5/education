@@ -1,0 +1,37 @@
+When is print(bob) necessary, where bob is the name of a turtle?
+
+In exercise 4.1 part 1, in the stack diagram, should bob be retained as the name of the turtle, even though in __main__
+    bob -> turtle.Turtle(), and previously we have seen the value passed to future parameters rather than the variable
+    name?
+
+In 8.3, why doesn't the following code work have the same postconditions as the one in my py. file does?
+
+    prefixes = 'JKLMNOPQ'
+    suffix_1 = 'ack'
+    suffix_2 = 'uack'
+
+    for letter in prefixes:
+        if not letter == "O" or not letter == "Q":
+            print(letter + suffix_1)
+        else:
+            print(letter + suffix_2)
+
+    Answer: it is because if letter is O, we have the condition not Q being satisfied, so the body of the if statement
+        runs.
+
+In 14.3, why must different format strings be used to format the second operand if
+    the result is a string in any case, while something like str() can be used whether
+    the operand is a floating point number, an integer etc.?
+
+    Answer: this probably gives more freedom to the way the formatted string appears.
+    For example, str() operated on the floating point number 42.0 would result in
+    "42.0", but if you wanted the formatted string to be a string containing an
+    integer, you could perform "%d" % 42.0
+
+Why use try/except blocks at all when an error just yields an error message anyway?
+
+    Answer: try…except blocks let you handle exceptions gracefully. You may also
+    want to implement a feature like saving an exception to a log file using a
+    package like Python’s logging module. This would let you keep track of
+    exceptions that have been raised.
+
