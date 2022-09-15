@@ -75,13 +75,11 @@ def bubble_sort(arr):
     # Whether we do the swap or not, we then increment i and repeat all the way down the array. We repeat this entire
     # process for a number of times equal to len(arr)
 
-    # I just put len(arr) - 1 because the last element remaining (x) at the beginning will always be in the correct place:
-    # think about it. This remaining item (x) will have been, before the last bubble sort, ahead of the item at the
-    # beginning of the array previously (y). If the two were swapped, then y was greater than x. If we use this logic
-    # recursively, thinking about whatever y was once ahead of etc., then we realise that the array must be sorted when
-    # x is at the start of it. Moreso, we know that the limiting case for bubble sort is when the array is in the
-    # reverse order; use that and you'll realise that it will only take len(arr) - 1 iterations, rather than len(arr)
-    # iterations, in that case too.
+    # I just put len(arr) - 1 because the last element remaining (x) at the beginning will always be in the correct place. This 
+    # is because, in one pass of bubble sort (i.e. one iteration in the for loop, call this a bubble-up), the smallest element, wherever it is in the 
+    # array, will move 1 place closer to the front of the array if it isn't there already. So, say this element is at the end 
+    # of the array, at index len(arr) - 1; then, to get to index 0, the number of times it must move by 1 would be 
+    # [len(arr) - 1 - 0 / 1] = len(arr) - 1, so it would be in the correct place (at the front) in len(arr) - 1 bubble-ups.
     for i in range(len(arr) - 1):
 
         j = 0
