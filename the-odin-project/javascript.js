@@ -240,3 +240,26 @@ const COLOR_ORANGE = "#FF7F00"
 let max = 57
 actual = max - 13
 percentage = actual / max
+
+
+
+// https://javascript.info/types
+// String in backticks is the same as an f-string in Python
+
+
+// Explicitly assigning undefined to a variable is not recommended
+
+
+// The result of typeof null is "object". That’s an officially recognized error in 
+// typeof, coming from very early days of JavaScript and kept for compatibility. 
+// Definitely, null is not an object. It is a special value with a separate type 
+// of its own. The behavior of typeof is wrong here.
+
+// The result of typeof alert is "function", because alert is a function. We’ll 
+// study functions in the next chapters where we’ll also see that there’s no 
+// special “function” type in JavaScript. Functions belong to the object type. 
+// But typeof treats them differently, returning "function". That also comes from 
+// the early days of JavaScript. Technically, such behavior isn’t correct, but 
+// can be convenient in practice.
+
+// typeof is an operator, not a function.
