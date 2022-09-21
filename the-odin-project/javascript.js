@@ -263,3 +263,68 @@ percentage = actual / max
 // can be convenient in practice.
 
 // typeof is an operator, not a function.
+
+
+
+// https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Strings
+// Using template literals for string concatenation usually gives you more 
+// readable code, for example:
+
+// console.log(`${greeting}, ${name}`)
+
+// versus
+
+// console.log(greeting + ", " + name)
+
+
+// The Number OBJECT converts anything to a number if it can, while the toString() 
+// METHOD converts to string (surprisingly)
+
+
+// Template literals respect the line breaks in the source code
+
+
+
+// https://www.w3schools.com/js/js_string_methods.asp
+// Using .replace with the /g flag replaces all matches
+
+// Using .replace with the /i flag replaces case insensitive
+
+
+
+// chrome.google.com/webstore/detail/grepper/amaaokahonnfjjemodnpmeenfpnnbkco?hl=en
+// == will say that 0 and an empty string are each equal to false
+
+// The === checks the equality without type conversion, so it will differentiate 
+// 0 and an empty string from false
+
+// !== (not !=) is analogous of ===, for non-equalities
+
+// null == undefined returns true, but null === undefined returns false;
+// conversely, null != undefined returns false, but null !== undefined returns true
+
+// For maths and other operators, null is converted to 0 and undefined to NaN
+
+// null == 0 returns false and null > 0 returns false, but null >= 0 returns true 
+// in spite of this--this is because the use of the > operator means null is 
+// converted to 0 and then the comparison is done (0 of course == 0), whereas 
+// this didn't occur in the case of null == 0
+
+// NaN is a special numeric value which returns false for all comparisons. Therefore, 
+// undefined > 0 and undefined < 0 both return false (the > and < cause undefined 
+// to be converted to NaN before the comparison)
+
+// the equality check == for undefined and null is defined such that, without any 
+// conversions, they equal each other and don’t equal anything else. Therefore, 
+// undefined == 0 and null == 0 return false, because 0 is not in the list mentioned 
+// (which contains just undefined and null)
+
+
+// Suggestions:
+
+// 1. Treat any comparison involving undefined/null, except that done by the strict 
+// equality === with exceptional care.
+
+// 2. Don’t use comparisons >= > < <= with a variable which may be 
+// null/undefined, unless you’re really sure of what you’re doing. If a variable 
+// can have these values, check for them separately.
