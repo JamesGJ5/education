@@ -328,3 +328,27 @@ percentage = actual / max
 // 2. Don’t use comparisons >= > < <= with a variable which may be 
 // null/undefined, unless you’re really sure of what you’re doing. If a variable 
 // can have these values, check for them separately.
+
+
+
+// https://javascript.info/logical-operators
+// Precedence of AND (&&) is higher than that of OR (||)
+
+
+// For readability, it's recommended that one does not use && to replace if, but 
+// uses && when necessary
+
+
+// NOT is !
+
+// !! is sometimes used for converting a value to boolean type--it implements 
+// NOT twice
+
+// The precedence of NOT is higher than all other logical operators (including 
+// AND and OR)
+
+
+
+// https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals
+// Any value that is not false, undefined, null, 0, NaN, or an empty string ('') 
+// actually returns true when tested as a conditional statement
