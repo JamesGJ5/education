@@ -352,3 +352,36 @@ percentage = actual / max
 // https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals
 // Any value that is not false, undefined, null, 0, NaN, or an empty string ('') 
 // actually returns true when tested as a conditional statement
+
+
+
+// https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions#anonymous_functions_and_arrow_functions
+// "We recommend that you use arrow functions, as they can make your code shorter 
+// and more readable."
+
+
+// The same scoping rules regarding functions (discussed in the current webpage) 
+// don't apply to loops and conditional blocks in JS
+
+
+
+// https://javascript.info/function-basics
+// A parameter of a function is a declaration-time variable, while an argument 
+// passed to a function (to a specific parameter, for example) is a call-time 
+// term
+
+
+// If a function is called, but an argument is not provided, then the 
+// corresponding value becomes undefined.
+
+
+// See current webpage for common function prefixes (show, get, calc, create and 
+// check) and what they commonly mean
+
+
+// Try to follow the "One function - one action" principle, where one action means 
+// one *independent* action, for easy refactoring.
+
+
+// To make the code clean and easy to understand, it’s recommended to use mainly 
+// local variables and parameters in the function, not outer variables.
