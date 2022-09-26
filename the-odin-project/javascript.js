@@ -385,3 +385,10 @@ percentage = actual / max
 
 // To make the code clean and easy to understand, it’s recommended to use mainly 
 // local variables and parameters in the function, not outer variables.
+
+
+
+// https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong
+// It seems that any declaration of a variable returns undefined, but assigning a variable to a value 
+// without any declaration returns the value. Remembering this may be important in preventing 
+// bugs.
