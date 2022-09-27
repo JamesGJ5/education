@@ -392,3 +392,65 @@ percentage = actual / max
 // It seems that any declaration of a variable returns undefined, but assigning a variable to a value 
 // without any declaration returns the value. Remembering this may be important in preventing 
 // bugs.
+
+
+
+// https://www.w3schools.com/js/js_arrays.asp
+// Best to initialise an array using the array literal method (i.e. const array = [1, 2, 3]) 
+// rather than const array = new Array(1, 2, 3)
+
+
+// Adding elements to an array with high indexes (i.e. indices greater than 
+// array.length) can create undefined "holes" in an array (in between the 
+// end of the array beforehand and the new end of the array)
+
+
+// If you accidentally try to use named indexes to access and array element, 
+// JavaScript redefines the array to an object. After that, some array methods and 
+// properties will produce incorrect results
+
+
+// In JavaScript, arrays (which are special types of object) use numbered indexes 
+// while other objects use named indexes
+
+// Rather than using index equal to current array length to an append an element 
+// to the array, I guess it'd be best to just use push()
+
+
+// typeof <an array> returns "object". To see if a variable points specifically to 
+// an array object, use Array.isArray() or the instanceof operator
+
+
+
+// https://www.w3schools.com/js/js_array_methods.asp
+// Array elements can be deleted using the delete operator but this leaves 
+// undefined holes in the array, so you may want to use pop() or shift() instead
+
+
+// The concat() method does not change the existing arrays. It always returns a 
+// new array.
+
+
+// You can use splice() to remove elements without leaving "holes" in the array
+
+
+// Note: slice(), unlike splice, does not modify the array on which it is called. 
+// It is similar to a typical slice in Python (like y = x[1:5]).
+
+
+// Printing an array implements what toString() implements before displaying the 
+// contents of the array (i.e. comma-separated elements)
+
+
+// ALL JavaScript objects have a toString() method
+
+
+
+// https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code
+// The main difference between a do...while loop and a while loop is that the code 
+// inside a do...while loop is always executed at least once
+
+
+
+// https://javascript.info/while-for
+// Labels can help you break out of multiple loops at once
