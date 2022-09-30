@@ -21,14 +21,13 @@ def insertion_sort(arr):
         while j > 0 and arr[j - 1] > current:
 
             arr[j] = arr[j - 1]
-            arr[j - 1] = current
 
             j -= 1
 
-        # todo: at this point, Mosh assigns current to something new; find out why
+        # Doing this at the end avoids unnecessary assignment operations in the mean time
+        arr[j] = current
 
     return arr
-
 
 def selection_sort(arr):
     """Takes an array and implements selection sort on it, returning the array sorted in ascending order. Stable
@@ -294,9 +293,9 @@ if __name__ == '__main__':
 
     x = [3, 2, 1, 6, 2, 7]
 
-    # print(insertionSort(x))
+    # print(insertion_sort(x))
     # print(selection_sort(x))
     # print(bubble_sort(x))
-    print(quick_sort(x, 0, len(x) - 1))
+    # print(quick_sort(x, 0, len(x) - 1))
     # print(quick_sort(x))
     # print(merge_sort(x))
