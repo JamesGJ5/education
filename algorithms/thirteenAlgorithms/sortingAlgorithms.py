@@ -287,6 +287,13 @@ def merge_sort(arr):
         i += 2
 
 
+def timsort():
+    """What Python's sort function uses.
+    
+    Worst-case time complexity: O(nlogn)
+    Worst-case auxiliary space complexity: O(n)
+    """
+    pass
 
 
 if __name__ == '__main__':
