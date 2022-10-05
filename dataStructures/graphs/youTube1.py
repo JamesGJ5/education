@@ -222,7 +222,9 @@ def undirected_path_youtube(edges, src, dst):
     return has_path_youtube(graph, src, dst, set())
 
 def build_graph(edges):
-    """Builds an adjacency list graph from a list of edges (lists containing 2 nodes)."""
+    """Builds an adjacency list graph from a list of edges (lists containing 2 nodes). I think 
+    this is O(n**2) in time (where n is number of nodes) and O(n**2) in space--see 
+    the reasoning in undirected_has_path information re: building adjacency map."""
     graph = {}
 
     for edge in edges:
