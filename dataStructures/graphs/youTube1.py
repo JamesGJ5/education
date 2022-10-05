@@ -320,7 +320,11 @@ def component_size(graph, node, visited):
     """Counts the number of nodes in the component in which the passed node is located.
 
     Time complexity: O(n**2)
+    - At worst, all nodes are in this one component. Traversal with visited set 
+    is at worst the number of edges (n**2).
     Auxiliary space complexity: O(n)
+    - Visited AS + recursion depth AS = O(n) + O(n) (the latter applies when 
+    graph is linked list) = O(n).
     """
     if str(node) in visited:
         return 0
