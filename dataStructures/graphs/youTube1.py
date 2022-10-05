@@ -263,7 +263,14 @@ def connected_components_count(graph):
     """Counts the number of collections of connected components.
 
     Time complexity: O(n**2)
+    - You might think that, because the for loop below runs n times, the overall 
+    time complexity would be n * time complexity of explore (n**2). However, 
+    explore only occurs extensively in an island when we have unvisited nodes, 
+    so this is not really the case. The time consuming part is going through 
+    all of the edges, and edges are only gone through about once, and there 
+    are n**2 edges at most, so time complexity is O(n**2).
     Auxiliary space complexity: O(n)
+    - O(n) from visited + O(n) from explore() at any given time means O(n) overall.
     """
     visited = set()
     count = 0
@@ -276,6 +283,8 @@ def explore(graph, current, visited):
 
     Time complexity: O(n**2)
     Auxiliary space complexity: O(n)
+    - At worst, explore() goes through every single node and thus has n stack 
+    frames, hence the O(n) space complexity.
     """
     if str(current) in visited:
         return False
