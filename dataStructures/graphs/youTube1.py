@@ -198,7 +198,10 @@ def undirected_has_path(edges, src, dst):
     - There are up to n**2 edges, so building the adjacency map is an n**2 operation 
     in time. Sum that with the n**2 time complexity of has_path_directed_or_undirected 
     and you get an O(n**2) time complexity overall.
-    Auxiliary space complexity: O(n)
+    Auxiliary space complexity: O(n**2)
+    - To make the adjacency map, you store up to n keys; each key can have up to n neighbours, so I think it is 
+    an O(n**2) operation overall. has_path_directed_or_undirected is O(n) in space, 
+    so things are still O(n**2) overall in space.
     """
     graph = defaultdict(list)
     for edge in edges:
