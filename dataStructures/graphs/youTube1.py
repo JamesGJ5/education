@@ -95,47 +95,47 @@ def breadth_first_print(graph, source):
         print(current)
         queue.extend(graph[current])
 
-# def has_path(graph, src, dst):
-#     """Takes a graph and returns True if it contains a valid path from Node src to Node dst, but False otherwise. Uses
-#     an iterative depth-first traversal. Might not work with a cyclic graph. 
-#     Directed graph here.
-#
-#     Time complexity: O(n**2)
-#     - Should be on this sort of order because there are up to n**2 edges and you 
-#     will have to traverse all of them. However, edges can be repeated, so might 
-#     not simply be n**2 steps, could be more, but this order is a good estimate of 
-#     a worst-case.
-#     Auxiliary space complexity: O(n)
-#     """
-#     stack = [src]
-#     while len(stack) > 0:
-#         current = stack.pop()
-#         if current == dst:
-#             return True
-#         stack.extend(graph[current])
-#     return False
+def has_path1(graph, src, dst):
+    """Takes a graph and returns True if it contains a valid path from Node src to Node dst, but False otherwise. Uses
+    an iterative depth-first traversal. Might not work with a cyclic graph. 
+    Directed graph here.
 
-# def has_path(graph, src, dst):
-#     """Takes a graph and returns True if it contains a valid path from Node src to Node dst, but False otherwise. Uses
-#     a breadth-first traversal. Might not work with a cyclic graph. Directed graph 
-#     here.
-#
-#     Time complexity: O(n**2)
-#     - Should be on this sort of order because there are up to n**2 edges and you 
-#     will have to traverse all of them. However, edges can be repeated, so might 
-#     not simply be n**2 steps, could be more, but this order is a good estimate of 
-#     a worst-case.
-#     Auxiliary space complexity: O(n)
-#     """
-#     queue = [src]
-#     while len(queue) > 0:
-#         current = queue.pop(0)
-#         if current == dst:
-#             return True
-#         queue.extend(graph[current])
-#     return False
+    Time complexity: O(n**2)
+    - Should be on this sort of order because there are up to n**2 edges and you 
+    will have to traverse all of them. However, edges can be repeated, so might 
+    not simply be n**2 steps, could be more, but this order is a good estimate of 
+    a worst-case.
+    Auxiliary space complexity: O(n)
+    """
+    stack = [src]
+    while len(stack) > 0:
+        current = stack.pop()
+        if current == dst:
+            return True
+        stack.extend(graph[current])
+    return False
 
-def has_path(graph, src, dst):
+def has_path2(graph, src, dst):
+    """Takes a graph and returns True if it contains a valid path from Node src to Node dst, but False otherwise. Uses
+    a breadth-first traversal. Might not work with a cyclic graph. Directed graph 
+    here.
+
+    Time complexity: O(n**2)
+    - Should be on this sort of order because there are up to n**2 edges and you 
+    will have to traverse all of them. However, edges can be repeated, so might 
+    not simply be n**2 steps, could be more, but this order is a good estimate of 
+    a worst-case.
+    Auxiliary space complexity: O(n)
+    """
+    queue = [src]
+    while len(queue) > 0:
+        current = queue.pop(0)
+        if current == dst:
+            return True
+        queue.extend(graph[current])
+    return False
+
+def has_path3(graph, src, dst):
     """Takes a graph and returns True if it contains a valid path from Node src to Node dst, but False otherwise. Uses
     a recursive depth-first traversal. Might not work with a cyclic graph. Directed 
     graph here.
@@ -150,7 +150,7 @@ def has_path(graph, src, dst):
     if src == dst:
         return True
     for neighbour in graph[src]:
-        if has_path(graph, neighbour, dst):
+        if has_path3(graph, neighbour, dst):
             return True
     return False
 
@@ -466,8 +466,12 @@ if __name__ == '__main__':
 
     # Fully-directed graph
     # graph = dict(f=['g', 'i'], g=['h'], i=['g', 'k'], h=[], k=[], j=['i'])
-    # print(has_path(graph, 'i', 'f'))    # False
-    # print(has_path(graph, 'f', 'i'))    # True
+    # print(has_path1(graph, 'i', 'f'))    # False
+    # print(has_path1(graph, 'f', 'i'))    # True
+    # print(has_path2(graph, 'i', 'f'))    # False
+    # print(has_path2(graph, 'f', 'i'))    # True
+    # print(has_path3(graph, 'i', 'f'))    # False
+    # print(has_path3(graph, 'f', 'i'))    # True
 
 
     # Undirected graph's edges
