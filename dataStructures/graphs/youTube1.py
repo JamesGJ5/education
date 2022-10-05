@@ -349,8 +349,13 @@ def shortest_path(edges, src, dst):
       keep the positions of src and dst constant, then the time complexity is actually O(1)? Same question for space
       complexity.
     Answer: because we are thinking about worst-case time complexity to err on the side of caution
-    Time complexity: O(n)
-    Auxiliary space complexity: O(n)
+    Time complexity: O(n) + O(n**2)
+    - Below, while loop only runs as many times as there are nodes, because of 
+    popping of one node that occurs each time. However, graph-building is 
+    O(n**2) (see build_graph).
+    Auxiliary space complexity: O(n) + O(n**2)
+    - Graph building is O(n**2) in space, where n is number of vertices. O(n) 
+    refers to the visited set and the queue here.
     """
     graph = build_graph(edges)
     visited = set()
