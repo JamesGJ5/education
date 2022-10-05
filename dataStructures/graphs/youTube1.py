@@ -283,7 +283,7 @@ def explore(graph, current, visited):
 
     Time complexity: O(n**2)
     Auxiliary space complexity: O(n)
-    - At worst, explore() goes through every single node and thus has n stack 
+    - At worst, explore() goes through every single node in the same stack and thus has n stack 
     frames, hence the O(n) space complexity.
     """
     if str(current) in visited:
