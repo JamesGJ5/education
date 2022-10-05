@@ -30,26 +30,26 @@ import sys
 # }
 # print(graph)
 
-# def depth_first_print(graph, source):
-#     """Starting from the source node, undertakes a depth-first traversal on the given graph, printing values at each
-#     node it encounters. Uses an explicit stack (so no recursion).
-#
-#     Time complexity: O(n**2)
-#     Auxiliary space complexity: O(n)
-#     """
-#     # Must use an explicit stack, defined in https://www.youtube.com/watch?v=P2m9qxMiakA as being an ADT (Abstract Data
-#     # Type) stack that may be implemented by the programmer (me). In Python, can simply use a list and append/pop.
-#     # Remember: linked list is probably still a better option re: time, but list is fine for the purpose of learning
-#     # about graphs.
-#     stack = [source]
-#     while len(stack) > 0:
-#         current = stack.pop()
-#         print(current)
-#         # With extend, items in the passed array are appended to the array being extended one-by-one, so the time
-#         # complexity is O(k), where k is the number of items in the passed array.
-#         stack.extend(graph[current])
+def depth_first_print1(graph, source):
+    """Starting from the source node, undertakes a depth-first traversal on the given graph, printing values at each
+    node it encounters. Uses an explicit stack (so no recursion).
 
-def depth_first_print(graph, source):
+    Time complexity: O(n**2)
+    Auxiliary space complexity: O(n)
+    """
+    # Must use an explicit stack, defined in https://www.youtube.com/watch?v=P2m9qxMiakA as being an ADT (Abstract Data
+    # Type) stack that may be implemented by the programmer (me). In Python, can simply use a list and append/pop.
+    # Remember: linked list is probably still a better option re: time, but list is fine for the purpose of learning
+    # about graphs.
+    stack = [source]
+    while len(stack) > 0:
+        current = stack.pop()
+        print(current)
+        # With extend, items in the passed array are appended to the array being extended one-by-one, so the time
+        # complexity is O(k), where k is the number of items in the passed array.
+        stack.extend(graph[current])
+
+def depth_first_print2(graph, source):
     """Starting from the source node, undertakes a depth-first traversal on the given graph, printing values at each
     node it encounters. Uses an implicit stack (via recursion).
 
@@ -62,14 +62,14 @@ def depth_first_print(graph, source):
     # if len(graph[source]) == 0:
     #     return
     for neighbour in graph[source]:
-        depth_first_print(graph, neighbour)
+        depth_first_print2(graph, neighbour)
 
 def breadth_first_print(graph, source):
     # According to the YouTube video, breadth-first traversal is really only possible using iteration, since recursion
     # would counteract the queue you'd have to use.
     """Starting from the source node, undertakes a depth-first traversal on the given graph, printing values at each
     node it encounters. Uses iteration and queue. Very similar to the code above for the iterative version of the
-    depth_first_print function.
+    depth_first_print function (depth_first_print1).
 
     Time complexity: O(n**2)
     Total space complexity: O(n)
@@ -420,7 +420,8 @@ if __name__ == '__main__':
     # Fully-directed graph
     # graph = dict(a=['b', 'c'], b=['d'], c=['e'], d=['f'], e=[], f=[])
     # print(graph)
-    # depth_first_print(graph, 'a')
+    # depth_first_print1(graph, 'a')
+    # depth_first_print2(graph, 'a')
     # breadth_first_print(graph, 'a')
 
     # A cycle is any path in a graph from one node back to itself.
