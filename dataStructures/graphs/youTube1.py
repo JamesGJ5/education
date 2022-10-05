@@ -32,11 +32,14 @@ import sys
 
 def depth_first_print1(graph, source):
     """Starting from the source node, undertakes a depth-first traversal on the given graph, printing values at each
-    node it encounters. Uses an explicit stack (so no recursion).
+    node it encounters. Uses an explicit stack (so no recursion). Directed graph 
+    with no cycles.
 
-    Time complexity:
-    - TODO: figure out worst-case time complexity, knowing that this is a directed 
-    graph with no cycles but nodes can be revisited
+    Time complexity: O(n**2)
+    - Should be on this sort of order because there are up to n**2 edges and you 
+    will have to traverse all of them. However, edges can be repeated, so might 
+    not simply be n**2 steps, could be more, but this order is a good estimate of 
+    a worst-case.
     Auxiliary space complexity: O(n)
     """
     # Must use an explicit stack, defined in https://www.youtube.com/watch?v=P2m9qxMiakA as being an ADT (Abstract Data
@@ -53,11 +56,14 @@ def depth_first_print1(graph, source):
 
 def depth_first_print2(graph, source):
     """Starting from the source node, undertakes a depth-first traversal on the given graph, printing values at each
-    node it encounters. Uses an implicit stack (via recursion).
+    node it encounters. Uses an implicit stack (via recursion). Directed graph 
+    with no cycles.
 
-    Time complexity:
-    - TODO: figure out worst-case time complexity, knowing that this is a directed 
-    graph with no cycles but nodes can be revisited
+    Time complexity: O(n**2)
+    - Should be on this sort of order because there are up to n**2 edges and you 
+    will have to traverse all of them. However, edges can be repeated, so might 
+    not simply be n**2 steps, could be more, but this order is a good estimate of 
+    a worst-case.
     Auxiliary space complexity: O(n)
     """
     print(source)
@@ -73,11 +79,14 @@ def breadth_first_print(graph, source):
     # would counteract the queue you'd have to use.
     """Starting from the source node, undertakes a depth-first traversal on the given graph, printing values at each
     node it encounters. Uses iteration and queue. Very similar to the code above for the iterative version of the
-    depth_first_print function (depth_first_print1).
+    depth_first_print function (depth_first_print1). Directed graph 
+    with no cycles.
 
-    Time complexity:
-    - TODO: figure out worst-case time complexity, knowing that this is a directed 
-    graph with no cycles but nodes can be revisited
+    Time complexity: O(n**2)
+    - Should be on this sort of order because there are up to n**2 edges and you 
+    will have to traverse all of them. However, edges can be repeated, so might 
+    not simply be n**2 steps, could be more, but this order is a good estimate of 
+    a worst-case.
     Total space complexity: O(n)
     """
     queue = [source]
