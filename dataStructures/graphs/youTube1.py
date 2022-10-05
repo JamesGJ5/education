@@ -241,7 +241,9 @@ def has_path_youtube(graph, src, dst, visited):
     graph contains a path from src to dst, but False otherwise. Uses recursive depth-first search.
 
     Time complexity: O(n**2)
+    - Up to n**2 edges, where n is number of vertices.
     Auxiliary space complexity: O(n)
+    - Visited set.
     """
     if src in visited:
         return False
