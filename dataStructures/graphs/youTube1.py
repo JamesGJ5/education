@@ -195,6 +195,9 @@ def undirected_has_path(edges, src, dst):
     graph contains a path from src to dst, but False otherwise.
 
     Time complexity: O(n**2)
+    - There are up to n**2 edges, so building the adjacency map is an n**2 operation 
+    in time. Sum that with the n**2 time complexity of has_path_directed_or_undirected 
+    and you get an O(n**2) time complexity overall.
     Auxiliary space complexity: O(n)
     """
     graph = defaultdict(list)
