@@ -97,9 +97,14 @@ def breadth_first_print(graph, source):
 
 # def has_path(graph, src, dst):
 #     """Takes a graph and returns True if it contains a valid path from Node src to Node dst, but False otherwise. Uses
-#     an iterative depth-first traversal. Might not work with a cyclic graph.
+#     an iterative depth-first traversal. Might not work with a cyclic graph. 
+#     Directed graph here.
 #
 #     Time complexity: O(n**2)
+#     - Should be on this sort of order because there are up to n**2 edges and you 
+#     will have to traverse all of them. However, edges can be repeated, so might 
+#     not simply be n**2 steps, could be more, but this order is a good estimate of 
+#     a worst-case.
 #     Auxiliary space complexity: O(n)
 #     """
 #     stack = [src]
@@ -112,9 +117,14 @@ def breadth_first_print(graph, source):
 
 # def has_path(graph, src, dst):
 #     """Takes a graph and returns True if it contains a valid path from Node src to Node dst, but False otherwise. Uses
-#     a breadth-first traversal. Might not work with a cyclic graph.
+#     a breadth-first traversal. Might not work with a cyclic graph. Directed graph 
+#     here.
 #
 #     Time complexity: O(n**2)
+#     - Should be on this sort of order because there are up to n**2 edges and you 
+#     will have to traverse all of them. However, edges can be repeated, so might 
+#     not simply be n**2 steps, could be more, but this order is a good estimate of 
+#     a worst-case.
 #     Auxiliary space complexity: O(n)
 #     """
 #     queue = [src]
@@ -127,9 +137,14 @@ def breadth_first_print(graph, source):
 
 def has_path(graph, src, dst):
     """Takes a graph and returns True if it contains a valid path from Node src to Node dst, but False otherwise. Uses
-    a recursive depth-first traversal. Might not work with a cyclic graph.
+    a recursive depth-first traversal. Might not work with a cyclic graph. Directed 
+    graph here.
 
     Time complexity: O(n**2)
+    - Should be on this sort of order because there are up to n**2 edges and you 
+    will have to traverse all of them. However, edges can be repeated, so might 
+    not simply be n**2 steps, could be more, but this order is a good estimate of 
+    a worst-case.
     Auxiliary space complexity: O(n)
     """
     if src == dst:
