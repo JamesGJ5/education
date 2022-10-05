@@ -302,7 +302,11 @@ def largest_component(graph):
     nodes in the graph.
 
     Time complexity: O(n**2)
+    - Only traversing the graph (via at most all edges, n**2) once because of the 
+    visited set. There's recursion, but that's O(n), which applies to a stack 
+    if all nodes are in same component. O(n**2) + O(n) is O(n**2).
     Auxiliary space complexity: O(n)
+    - From visited set + recursive stack depth (both O(n)).
     """
     visited = set()
     largest_component_size = 0
