@@ -34,7 +34,9 @@ def depth_first_print1(graph, source):
     """Starting from the source node, undertakes a depth-first traversal on the given graph, printing values at each
     node it encounters. Uses an explicit stack (so no recursion).
 
-    Time complexity: O(n**2)
+    Time complexity:
+    - TODO: figure out worst-case time complexity, knowing that this is a directed 
+    graph with no cycles but nodes can be revisited
     Auxiliary space complexity: O(n)
     """
     # Must use an explicit stack, defined in https://www.youtube.com/watch?v=P2m9qxMiakA as being an ADT (Abstract Data
@@ -53,7 +55,9 @@ def depth_first_print2(graph, source):
     """Starting from the source node, undertakes a depth-first traversal on the given graph, printing values at each
     node it encounters. Uses an implicit stack (via recursion).
 
-    Time complexity: O(n**2)
+    Time complexity:
+    - TODO: figure out worst-case time complexity, knowing that this is a directed 
+    graph with no cycles but nodes can be revisited
     Auxiliary space complexity: O(n)
     """
     print(source)
@@ -71,7 +75,9 @@ def breadth_first_print(graph, source):
     node it encounters. Uses iteration and queue. Very similar to the code above for the iterative version of the
     depth_first_print function (depth_first_print1).
 
-    Time complexity: O(n**2)
+    Time complexity:
+    - TODO: figure out worst-case time complexity, knowing that this is a directed 
+    graph with no cycles but nodes can be revisited
     Total space complexity: O(n)
     """
     queue = [source]
