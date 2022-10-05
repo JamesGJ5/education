@@ -160,6 +160,8 @@ def has_path_directed_or_undirected(graph, src, dst):
     graph.
 
     Time complexity: O(n**2)
+    - There are up to n**2 edges, and edges won't be repeated much because nodes 
+    won't be revisited much, due to the removals below.
     Auxiliary space complexity: O(n)
     """
     if src == dst:
