@@ -20,6 +20,7 @@
 
 # KRUSKAL'S ALGORITHM (https://www.youtube.com/watch?v=JZBQLXgSGfs&t=308s)
 
+
 # UNION AND FIND OPERATIONS (https://www.youtube.com/watch?v=0jNmHPfA_yE)
 
 # 1. First, create a bijection: a mapping between the n objects you have and integers in range [0, n). Not necessary in
@@ -54,3 +55,5 @@
 
 # UNION FIND CODE (https://www.youtube.com/watch?v=ibjEGG7ylHk&list=PLDV1Zeh2NRsB6SWUrDFW2RmDotAfPbeHu&index=19):
 
+
+# See the file kruskal.py in the current repository for an implementation of the union-find in Kruskal's algorithm
