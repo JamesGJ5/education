@@ -55,15 +55,25 @@ class Graph:
     # Utility function to find set of an element i (uses path compression technique)
     # See https://www.youtube.com/watch?v=VHRhJWacxis for path compression
     def find(self, parent, i):
-        """I think that parent could be like the array in 6:40 of https://www.youtube.com/watch?v=0jNmHPfA_yE: an array
-        in which the index of each position is mapped to by the label of a node in a graph, and the element at this
-        index position is simply the index number of the node's parent. So, in recursion, you keep passing in "parent"
-        because you want to get to the position in the array where the element is equal to the index, as this means the
-        parent of the node represented by the index is itself--therefore, we have the root.
-        """
-        if parent[i] != i:
-            parent[i] = self.find(parent, parent[i])
-        return parent[i]
+        """Returns the root of the component i is in and implements path compression in that component too."""
+
+        # Finding root
+        root = i
+        while parent[root] != root:
+            root = parent[root]
+
+        # Path compression
+        while parent[i] != root:
+            next = parent[i]
+            parent[i] = root
+            i = next
+        return root
+
+        # A recursive version of the code, which includes both finding the root and also path compression too. However, 
+        # iteration tends to be more efficient, hence the use of the above instead.
+        # if parent[i] != i:
+        #     parent[i] = self.find(parent, parent[i])
+        # return parent[i]
 
     def union(self, parent, rank, x, y):
         """When comparing two nodes mapped to index numbers x and y, this function finds the roots of their groups and
