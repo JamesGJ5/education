@@ -99,7 +99,11 @@ class Graph:
         # and increment this node's rank by 1.
         else:
             parent[y] = x
-            # todo: find out if you really need to do the rank incrementation shown below
+            # Updating the rank of the new root is a good idea because it means, in future, smaller components will take 
+            # this as their new root. As a result, the maximum distance of a child to a root doesn't increase, while it 
+            # would if the root of the larger component instead made its parent the root of the smaller component. 
+            # Remember, while we have path compression, it isn't 100% effective in making sure that every single descendent 
+            # is only separated by 1 joint from the root, I don't think
             rank[x] += 1
 
     def kruskalMST(self):
