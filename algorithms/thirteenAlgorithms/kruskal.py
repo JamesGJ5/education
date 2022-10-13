@@ -61,9 +61,9 @@ class Graph:
         because you want to get to the position in the array where the element is equal to the index, as this means the
         parent of the node represented by the index is itself--therefore, we have the root.
         """
-        if parent[i] == i:
-            return i
-        return self.find(parent, parent[i])
+        if parent[i] != i:
+            parent[i] = self.find(parent, parent[i])
+        return parent[i]
 
     def union(self, parent, rank, x, y):
         """When comparing two nodes mapped to index numbers x and y, this function finds the roots of their groups and
