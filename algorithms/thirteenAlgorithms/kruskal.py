@@ -57,23 +57,25 @@ class Graph:
     def find(self, parent, i):
         """Returns the root of the component i is in and implements path compression in that component too."""
 
-        # Finding root
-        root = i
-        while parent[root] != root:
-            root = parent[root]
+        # # Finding root
+        # root = i
+        # while parent[root] != root:
+        #     root = parent[root]
 
-        # Path compression
-        while parent[i] != root:
-            next = parent[i]
-            parent[i] = root
-            i = next
-        return root
+        # # Path compression
+        # while parent[i] != root:
+        #     next = parent[i]
+        #     parent[i] = root
+        #     i = next
+        # return root
 
-        # A recursive version of the code, which includes both finding the root and also path compression too. However, 
-        # iteration tends to be more efficient, hence the use of the above instead.
-        # if parent[i] != i:
-        #     parent[i] = self.find(parent, parent[i])
-        # return parent[i]
+        # A recursive version of the code, which includes both finding the root and also path compression too. Much 
+        # more concise than the iterative code and the path compression used prior to the last call of find() in 
+        # __main__ means there probably won't be many stack frames anyway, so not too much overhead re: efficiency 
+        # loss
+        if parent[i] != i:
+            parent[i] = self.find(parent, parent[i])
+        return parent[i]
 
     def union(self, parent, rank, x, y):
         """When comparing two nodes mapped to index numbers x and y, this function finds the roots of their groups and
