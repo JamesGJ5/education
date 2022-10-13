@@ -28,6 +28,9 @@
 # a higher order of growth than E, so if E is similar to V, this tends to O(E + Vlog(V)) instead of being closer to
 # O(E), which would be expected to be worse than O(Elog(V)), especially since E and V are similar.
 
+
+# NOTE: I wrote the below comment ages ago so I can't tell for absolute sure whether it is correct or not
+
 # IN CODE BELOW:
 
 # Sorting takes O(Elog(E)) time. Afterwards, iterate through all edges (of which there are E) and apply the find-union
