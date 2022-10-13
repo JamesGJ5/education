@@ -55,5 +55,8 @@
 
 # UNION FIND CODE (https://www.youtube.com/watch?v=ibjEGG7ylHk&list=PLDV1Zeh2NRsB6SWUrDFW2RmDotAfPbeHu&index=19):
 
+# See https://github.com/williamfiset/Algorithms/blob/master/src/main/java/com/williamfiset/algorithms/datastructures/unionfind/UnionFind.java 
+# for code in the above video
+
 
 # See the file kruskal.py in the current repository for an implementation of the union-find in Kruskal's algorithm
