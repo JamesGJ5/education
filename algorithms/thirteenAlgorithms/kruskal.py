@@ -71,20 +71,24 @@ class Graph:
         the root with the higher rank becomes the parent of that with the lower rank. See 'find' function description
         for what 'parent' is.
         """
-        xroot = self.find(parent, x)
-        yroot = self.find(parent, y)
+        # This is commented out because in kruskalMST(), we find the roots already (there called x and y) and pass them 
+        # to union(). Of course, in other implementations of the union-find, you probably want union() to take arbitrary 
+        # nodes instead and then check if their roots are the same before doing anything else (simply return if they are 
+        # the same in that case)
+        # xroot = self.find(parent, x)
+        # yroot = self.find(parent, y)
 
-        if rank[xroot] < rank[yroot]:
-            parent[xroot] = yroot
-        elif rank[xroot] > rank[yroot]:
-            parent[yroot] = xroot
+        if rank[x] < rank[y]:
+            parent[x] = y
+        elif rank[x] > rank[y]:
+            parent[y] = x
 
         # If the ranks are the same, then make one of the roots (arbitrarily choosing xroot here) the root of the union
         # and increment this node's rank by 1.
         else:
-            parent[yroot] = xroot
+            parent[y] = x
             # todo: find out if you really need to do the rank incrementation shown below
-            rank[xroot] += 1
+            rank[x] += 1
 
     def kruskalMST(self):
         """Finds a minimum spanning tree in this graph using Kruskal's algorithm."""
