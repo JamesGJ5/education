@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <label for="keywords">Keywords <span aria-label="required">*</span></label>
+    <input type="text" name="keywords" id="keywords">
+    <button>Click this button for an image!</button>
+    <img src="#">
+    <script>
+        const textField = document.querySelector('input');
+        const button = document.querySelector('button');
+        const img = document.querySelector('img');
+        button.addEventListener('click', () => {
+            const keywordString = textField.value;
+            fetch(
+                `https://api.giphy.com/v1/gifs/translate?api_key=8z87SxSsR9nqYhuyiNJHU2C0HdLj8qMF&s=${keywordString}`, 
+                {mode: 'cors'}
+            )
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(response) {
+                img.src = response.data.images.original.url;
+            })
+            .catch(function(response) {
+                img.src = './images/default.jpg';
+                img.style.width = '200px';
+            });
+        });
+    </script>
+</body>
+</html>
