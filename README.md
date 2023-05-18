@@ -1,0 +1,1 @@
+A bunch of notes etc. on various software development topics, including data structures & algorithms and Python (the programming language I started with). Also, ad hoc pieces of HTML, CSS and JavaScript written to tinker with various specifics of full-stack development.
