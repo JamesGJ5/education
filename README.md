@@ -21,3 +21,7 @@ A bunch of notes made on various software development topics.
 .complexity/
 
 - There's not much in here but I have knowledge in time complexity and space complexity and how to optimize these things using various algorithms and data structures.
+
+.amazon-web-services/
+
+- This directory was used to follow tutorials related to AWS tools like Amplify, Lambda, DynamoDB, API Gateway and IAM.
