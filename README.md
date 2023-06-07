@@ -26,3 +26,6 @@ A bunch of notes made on various software development topics.
 
 - This directory was used to follow tutorials related to AWS tools like Amplify, Lambda, DynamoDB, API Gateway and IAM.
 
+./docker/
+
+- This directory was used to follow tutorials related to Docker.
