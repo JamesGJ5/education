@@ -29,3 +29,7 @@ A bunch of notes made on various software development topics.
 ./docker/
 
 - This directory was used to follow tutorials related to Docker.
+
+./kubernetes/
+
+- This directory was used to follow tutorials related to Kubernetes.
