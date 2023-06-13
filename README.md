@@ -33,3 +33,7 @@ A bunch of notes made on various software development topics.
 ./kubernetes/
 
 - This directory was used to follow tutorials related to Kubernetes.
+
+./react-typescript/
+
+- This directory was used to follow tutorials related to writing TypeScript in React, where I hadn't really used TypeScript before.
