@@ -79,6 +79,13 @@ def bubble_sort(arr):
     # array, will move 1 place closer to the front of the array if it isn't there already. So, say this element is at the end 
     # of the array, at index len(arr) - 1; then, to get to index 0, the number of times it must move by 1 would be 
     # [len(arr) - 1 - 0 / 1] = len(arr) - 1, so it would be in the correct place (at the front) in len(arr) - 1 bubble-ups.
+
+    # See video for a couple of ways to improve efficiency in this algorithm, although they don't reduce worst-case time 
+    # and space complexity regarding Big-O notation. The first way involves checking in each iteration of the outer 
+    # 'for' loop whether the array is sorted at the end or not. The second way involves not checking the elements that are 
+    # already in the correct position. For example, after the first iteration of the outer loop, the final index in the 
+    # array will contain the correct element: the largest one. So, in the next iteration, j shouldn't ever reach the condition
+    # for this element to be considered.
     for i in range(len(arr) - 1):
 
         j = 0
