@@ -259,34 +259,6 @@ def merge_sort(arr):
     return sorted_array + sorted_left[i: ] + sorted_right[j: ]
 
 
-def merge_sort(arr):
-    """Takes an array and implements iterative merge sort on it, returning the array sorted in ascending order. Stable sorting
-    algorithm.
-
-    Time complexity:
-        Worst case: O(n*log(n)), since there are log2(n) recursive rows and n elements per row, so n comparisons per
-            row
-    Auxiliary space complexity: O(n), see paper
-    """
-
-    # 1. Taking a bottom-up approach, so starting from the idea of the array being split into individual elements, then
-    # building them up into a sorted array.
-    # 2. Initialise i = 0. While i < len(arr), do the following:
-    #   a) Compare the first element to the second element, and swap if the latter is smaller than the former.
-    #   Increment i by 2.
-    #   b) Continue step a) until the condition of i < len(arr) is no longer satisfied.
-    # 3.
-
-    i = 0
-    while i < len(arr):
-
-        if arr[i] > arr[i + 1]:
-
-            arr[i], arr[i + 1] = arr[i + 1], arr[i]
-
-        i += 2
-
-
 def timsort():
     """What Python's sort function uses.
     
